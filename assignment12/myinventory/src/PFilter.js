@@ -18,9 +18,9 @@ class PFilter extends Component{
 
     render() {
       return ( 
-        <div class="col-md-4">
+        <div class="col-md-5">
                 <label>
-                    <input type="text" name="filterText" placeholder="Search HERE!" onChange={this.handleChange}/><br />
+                    <input type="text" name="filterText" placeholder="Search" onChange={this.handleChange}/><br />
                 </label>
         </div>
         )

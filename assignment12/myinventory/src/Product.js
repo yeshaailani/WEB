@@ -32,6 +32,7 @@ let PRODUCTS = {
         }
         this.setState((prevState) => {
           let products = prevState.products
+          product.price  = '$'+product.price;
           products[product.id] = product
           return { products }
         });
@@ -42,35 +43,24 @@ let PRODUCTS = {
         this.setState((prevState) => {
           let products = prevState.products
           delete products[productId]
-          return { pro }
+          return { products }
         });
 
 }
 
 render()
 {
-
-
     return(
         <div class="container-fluid">
-        <h1 class="col-md-4">My Inventory</h1>
-            <div> 
+        <h1 class="col-md-3">My Inventory</h1>
+            <div class="col-md-5"> 
                 <PFilter onFilter={this.handleFilter}/>
-                <ProductTable productList = {this.state.products} onDestroy={this.handleDestroy} filterText={this.state.filterText}/>
+                <ProductTable products = {this.state.products} onDestroy={this.handleDestroy} filterText={this.state.filterText}/>
                 <ProductForm onSave={this.handleSave} onDestroy={this.handleDestroy}/>
             </div>
         </div>
-        );
-
-
-
-
-    
-    
+        );   
 }
-
-
-
 
 }
 export default Product;

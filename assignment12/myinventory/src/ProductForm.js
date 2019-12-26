@@ -36,8 +36,8 @@ class ProductForm extends Component {
 
   render() {
     return (
-        <div class="col-md-4">
-        <h1>Add a new product</h1>
+        <div class="col-md-5">
+        <h4>Add a new product</h4>
         <form onSubmit={this.handleSave}>
             <label> Name:
             <br/>
