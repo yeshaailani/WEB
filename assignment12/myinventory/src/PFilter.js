@@ -1,0 +1,30 @@
+import React, {Component} from 'react';
+
+
+class PFilter extends Component{
+    constructor(props) {
+        super(props);
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(e) {
+        const value = e.target.value;
+        const name = e.target.name;
+        this.props.onFilter({
+            [name]: value
+        });
+    }
+
+
+    render() {
+      return ( 
+        <div class="col-md-4">
+                <label>
+                    <input type="text" name="filterText" placeholder="Search HERE!" onChange={this.handleChange}/><br />
+                </label>
+        </div>
+        )
+    }
+}
+
+export default PFilter;
