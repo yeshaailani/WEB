@@ -12,3 +12,5 @@ class ProductTable extends Component {
         this.props.onDestroy(id)
     }
 }
+
+export default ProductTable;
