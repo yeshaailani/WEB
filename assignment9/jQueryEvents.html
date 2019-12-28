@@ -27,27 +27,22 @@
 			alert("Button is clicked(4 and 5)")
         });    
         //5
-        $("#divFive").css({
-                "width": "200px",
-                "height": "200px",
-                "background-color": "grey",
-            })
+        $("#divFive").css({"width": "200px","height": "200px","background-color": "grey"})
 
-        $("#divFive").on("mouseenter", function () {
+        $("#divFive").mouseenter( function () {
 			alert("Mouse entered");
 		})
-		$("#divFive").on("mouseleave", function () {
+		$("#divFive").mouseleave(function () {
 			alert("Mouse left");
 		})
 		$("#divFive").on("click", function () {
 			alert("Mouse clicked");
 		})
-
         //6
-        $("#divFive").on("mouseenter", function () {
+        $("#divFive").mouseenter(function () {
 			$("span").text("Mouse entered");
 		})
-		$("#divFive").on("mouseleave", function () {
+		$("#divFive").mouseleave(function () {
 			$("span").text("Mouse left");
 		})
 		$("#divFive").on("click", function () {
@@ -67,11 +62,11 @@
         })  
 
         //9
-        $("input#back").on("blur", function () {
+        $("input#back").blur(function () {
 			$(this).css("background-color", "white");
 		})
-        $("input#back").on("focus", function () {
-			$(this).css("background-color", "grey");
+        $("input#back").focus(function () {
+			$(this).css("background-color", "#929CA4");
 		})
 		
 
